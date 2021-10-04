@@ -153,7 +153,7 @@ del_file_out_(Dir, [FileName | T]) ->
 %% 使用io_lib进行转义
 format_2({log, MilliSecond, Pid, Mod, Line, Data}) ->
 	{{Y, M, D}, {H, Minute, S}, MilliSec} = wx_time:millisecond_to_datetime(MilliSecond),
-	io_lib:format("~w-~2..0w-~2..0w ~2..0w:~2..0w:~2..0w.~3..0w ~w ~w:~4..0w ~0p~n",
+	io_lib:format("~w-~2..0w-~2..0w ~2..0w:~2..0w:~2..0w.~3..0w ~w ~w:~4.. w ~0p~n",
 		[Y, M, D, H, Minute, S, MilliSec, Pid, Mod, Line, Data]).
 %%format_3({log, MilliSecond, Pid, Mod, Line, Data}) ->
 %%	{{Y, M, D}, {H, Minute, S}, MilliSec} = wx_time:millisecond_to_datetime(MilliSecond),
